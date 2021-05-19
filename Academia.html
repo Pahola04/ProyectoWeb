@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Seleccionar opción para mostrar un formulario u otro</title>
+<script src="https://kit.fontawesome.com/2cd6142c13.js" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- mobile metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- site metas -->
+<title>Castaño</title>
+<link rel="shortcut icon" href="img/lo.png" />
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- bootstrap css -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- style css -->
+<link rel="stylesheet" href="css/style.css">
+<!-- <link rel="stylesheet" href="main.css"> -->
+<!-- Responsive-->
+<link rel="stylesheet" href="css/responsive.css">
+<!-- fevicon -->
+<link rel="icon" href="images/fevicon.png" type="image/gif" />
+<!-- Scrollbar Custom CSS -->
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+<!-- Tweaks for older IEs-->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<link type="text/css" href="css/styles.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+function mostrar(id) {
+	if (id == "reingreso") {
+		$("#reingreso").show();
+		$("#newingreso").hide();
+	}
+	
+	if (id == "newingreso") {
+		$("#reingreso").hide();
+		$("#newingreso").show();
+	}
+
+}
+</script>
+</head>
+<body class="main-layout" style="font-family: Comic Sans MS;">
+	<!-- loader  -->
+	<div class="loader_bg">
+	   <div class="loader"><img src="img/log.png" alt="#" /></div>
+	</div>
+	<!-- end loader --> 
+	<!-- header -->
+	<header>
+	   <!-- header inner -->
+	   <div class="header">
+		  <div class="head_top">
+			 <div class="container">
+				<div class="row">
+				  <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+					 <div class="top-box">
+					  <ul class="sociel_link">
+					   <li> <a href="https://www.facebook.com/colegioelcastano"><i class="fa fa-facebook"></i></a></li>
+					   <li> <a href="https://api.whatsapp.com/send?phone=50246432931"><i class="fa fa-whatsapp"></i></a></li>
+					   <li> <a href="https://www.instagram.com/colegioelcastano/"><i class="fa fa-instagram"></i></a></li>
+				   </ul>
+				  </div>
+				</div>
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12"  style="font-family: Brush Script MT,cursive;">
+				 <div class="top-box">
+					
+				 </div>
+			  </div>
+			 </div>
+		  </div>
+	   </div>
+	   <div class="container">
+		  <div class="row">
+			 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+				<div class="full">
+				   <div class="center-desk">
+					  <div class="logo"> <a href="index.html"><img src="img/LOB2.PNG" alt="logo"/></a> </div>
+				   </div>
+				</div>
+			 </div>
+			 <div class="col-xl-7 col-lg-7 col-md-9 col-sm-9">
+				<div class="menu-area">
+				   <div class="limit-box">
+					  <nav class="main-menu">
+						 <ul class="menu-area-main">
+							<li> <a href="index.html">Inicio</a> </li>
+							<li> <a href="acerca.html">Acerca de</a> </li>
+							<li> <a href="Academia.html">Inscripciones</a> </li>
+							<li> <a href="nosotros.html">Nosotros</a> </li>
+							<li ><a style="color:white" target="_blank" type="button" class="btn buy me-md-2" href="portal/index.php">Casys</a> </li>
+							<li> <a  href="#"></a> </li>
+						 </ul>
+					  </nav>
+				   </div>
+				</div>
+			 </div>
+	   </div>
+	   </div>
+	   <!-- end header inner --> 
+	</header>
+<form action="index.php" method="post">
+
+		<div id="wrapper">
+			<!-- Select -->
+			<div>
+				<div class="content-select">
+					<select class="icon-envelope" id="status" name="status" onChange="mostrar(this.value);">
+						<option value="reingreso">Reingreso</option>
+						<option value="newingreso">Nuevo ingreso</option>
+					</select>
+					<i></i>
+				</div>
+			</div>
+	</div>
+</form>
+
+<div id="reingreso" class="element" style="display: none;">
+	<h2>Si eres reingreso...</h2>
+    <form action="index.php" method="post">
+    	<p>Nombre:<br/>
+    	<input type="text" name="nombre" /></p>
+        <p>Centro:<br/>
+    	<input type="text" name="centro" /></p>
+        <input type="submit" name="send" value="Enviar" />
+    </form>
+</div>
+
+<div id="newingreso" class="element" style="display: none;">
+	<h2>Si eres newingreso...</h2>
+    <form action="index.php" method="post">
+    	<p>Nombre:<br/>
+    	<input type="text" name="nombre" /></p>
+        <p>Empresa:<br/>
+    	<input type="text" name="centro" /></p>
+        <input type="submit" name="send" value="Enviar" />
+    </form>
+</div>
+
+      
+<hr class="featurette-divider">
+<!-- end contact -->
+    
+      <!-- FOOTER -->
+    
+    </main>
+    <section>
+
+
+    <footr>
+       <div class="footer">
+          <div class="container">
+             <div class="row">
+                <div class="col-md-7 offset-md-3">
+               
+                </div>
+          </div>
+       </main>
+       <footer class="container">
+       <div class="row">
+             <div class="col-xs-12 col-md-6 text-center">
+                <div class="contact">
+                   <h3>Contáctanos</h3>
+                   <span>(+502) 4643-2931</span><br>
+                   <span> (+502) 2433-3399</span><br>
+                     <span>colegioelcastano@hotmail.com</span>  
+                </div>
+             </div>
+                <div class="col-xs-12 col-md-6 text-center">
+                <div class="contact">
+                   <h3>Atención al cliente</h3>
+                   <span> Horarios</span>
+                     <span>7:00 a.m - 14:00 p.m.</span>  
+                </div>
+             </div>
+               
+          </div>
+
+           <br>
+          
+       </div>
+          <div class="copyright">
+             <p style="color:black">Copyright, 2021 All Right Reserved, El Castaño TI <a href="https://html.design/"></p>
+          </div>
+       
+    </div>
+    </footr>
+    <!-- end footer -->
+    <!-- Javascript files--> 
+    <script src="js/jquery.min.js"></script> 
+    <script src="js/popper.min.js"></script> 
+    <script src="js/bootstrap.bundle.min.js"></script> 
+    <script src="js/jquery-3.0.0.min.js"></script> 
+    <script src="js/plugin.js"></script> 
+    <!-- sidebar --> 
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script> 
+    <script src="js/custom.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script>
+       $(document).ready(function(){
+       $(".fancybox").fancybox({
+       openEffect: "none",
+       closeEffect: "none"
+       });
+       
+       $(".zoom").hover(function(){
+       
+       $(this).addClass('transition');
+       }, function(){
+       
+       $(this).removeClass('transition');
+       });
+       });
+       
+    </script> 
+ </body>
+</html>
